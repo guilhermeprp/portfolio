@@ -38,7 +38,7 @@ export const HomePage = styled.div`
 
         .title1 {
           // color: #c0c0c2;
-          color: #202125;
+          color: ${(props) => props.theme.colors.thirdtitle};
           font-size: 20px;
           font-weight: 100;
           letter-spacing: 10px;
@@ -62,7 +62,7 @@ export const HomePage = styled.div`
         .title3 {
           float: right;
           text-align: end;
-          color: #c0c0c2;
+          color: ${(props) => props.theme.colors.subtitle};
           font-size: 30px;
         }
       }

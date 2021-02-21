@@ -21,12 +21,14 @@ export const NavBar = styled.nav`
           height: 70px;
           margin-top: 5px;
           margin-left: 20px;
+          transition: 0.3s;
         }
 
         label {
           display: inline-block;
           margin-top: 7px;
           color: #ffffff;
+          transition: 0.3s;
           span {
             display: block;
           }
@@ -44,11 +46,9 @@ export const NavBar = styled.nav`
         cursor: pointer;
         #home-logo {
           filter: none;
-          transition: all 0.3s ease;
         }
         label {
-          color: #202125;
-          transition: all 0.3s ease;
+          color: ${(props) => props.theme.colors.thirdtitle};
           cursor: pointer;
         }
       }
