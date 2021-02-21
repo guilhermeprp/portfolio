@@ -1,6 +1,19 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const Body = styled.body`
-  overflow: hidden;
-  overscroll-behavior-x: none;
+export default createGlobalStyle`
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Gill Sans","Gill Sans MT",Calibri,"Trebuchet MS",sans-serif;
+}
+
+body{
+  background-color: ${(props) => props.theme.colors.background};
+  overflow-x:hidden;
+}
+
+
+
 `;

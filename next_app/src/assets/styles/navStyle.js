@@ -18,6 +18,7 @@ export const NavBar = styled.nav`
         display: contents;
         #home-logo {
           filter: invert(100%) hue-rotate(190deg) saturate(5) contrast(160%);
+          height: 70px;
           margin-top: 5px;
           margin-left: 20px;
         }

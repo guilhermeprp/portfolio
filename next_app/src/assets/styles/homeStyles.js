@@ -42,8 +42,7 @@ export const HomePage = styled.div`
           font-size: 20px;
           font-weight: 100;
           letter-spacing: 10px;
-          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-            sans-serif;
+
           margin: 0;
         }
 
@@ -53,8 +52,7 @@ export const HomePage = styled.div`
           font-size: 100px;
           letter-spacing: 5px;
           padding-bottom: 5px;
-          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-            sans-serif;
+
           margin: 0;
           text-align-last: right;
           float: right;
@@ -65,8 +63,6 @@ export const HomePage = styled.div`
           float: right;
           text-align: end;
           color: #c0c0c2;
-          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-            sans-serif;
           font-size: 30px;
         }
       }

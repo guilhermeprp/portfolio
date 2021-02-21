@@ -1,5 +1,6 @@
 import React from "react";
 import { NavBar } from "../assets/styles/navStyle";
+import logo from "../assets/images/logo.png";
 
 function Nav() {
   return (
@@ -7,7 +8,7 @@ function Nav() {
       <div className="header">
         <div className="nav-bar">
           <div className="home-button">
-            <div id="home-logo"></div>
+            <img id="home-logo" src={logo} />
             <label id="label-logo" htmlFor="#home-logo">
               <span className="nav-logo-title">Guilherme Pimenta </span>
               <span className="nav-logo-subtitle"> Front end Dev.</span>

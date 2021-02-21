@@ -1,12 +1,13 @@
 import React from "react";
 import { HomePage } from "../assets/styles/homeStyles.js";
+import homeBackground from "../assets/images/background-img.png";
 
 console.log(process.env.NODE_ENV);
 
 function Home() {
   return (
     <HomePage>
-      <img className="home-background"></img>
+      <img className="home-background" src={homeBackground} />
       <div className="home-bg-gradient"></div>
       <div className="row">
         <div className="wrapper">
