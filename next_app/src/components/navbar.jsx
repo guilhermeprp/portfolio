@@ -9,10 +9,6 @@ function Nav() {
         <div className="nav-bar">
           <div className="home-button">
             <img id="home-logo" src={logo} />
-            <label id="label-logo" htmlFor="#home-logo">
-              <span className="nav-logo-title">Guilherme Pimenta </span>
-              <span className="nav-logo-subtitle"> Front end Dev.</span>
-            </label>
           </div>
 
           <div className="box-menu-button">

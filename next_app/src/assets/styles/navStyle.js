@@ -23,33 +23,11 @@ export const NavBar = styled.nav`
           margin-left: 20px;
           transition: 0.3s;
         }
-
-        label {
-          display: inline-block;
-          margin-top: 7px;
-          color: #ffffff;
-          transition: 0.3s;
-          span {
-            display: block;
-          }
-          .nav-logo-title {
-            font-size: 20px;
-            font-weight: 600;
-          }
-          .nav-logo-subtitle {
-            letter-spacing: 5px;
-            margin-left: 10px;
-          }
-        }
       }
       .home-button:hover {
         cursor: pointer;
         #home-logo {
           filter: none;
-        }
-        label {
-          color: ${(props) => props.theme.colors.thirdtitle};
-          cursor: pointer;
         }
       }
       .box-menu-button {
@@ -111,15 +89,6 @@ export const NavBar = styled.nav`
             height: 50px;
             margin-top: 10px;
             margin-left: 10px;
-          }
-          label {
-            .nav-logo-title {
-              font-size: 17px;
-            }
-            .nav-logo-subtitle {
-              font-size: 12px;
-              margin-left: 6px;
-            }
           }
         }
       }
