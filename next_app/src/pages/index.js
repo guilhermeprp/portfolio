@@ -10,7 +10,6 @@ function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <Nav></Nav>
         <Home></Home>
       </body>
     </html>

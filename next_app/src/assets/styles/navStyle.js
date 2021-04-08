@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const NavBar = styled.nav`
   z-index: 99999;
   background: transparent;
-  width: 100vw;
-  height: 80px;
+  width: 10vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;

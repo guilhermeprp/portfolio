@@ -1,27 +1,41 @@
 import React from "react";
-import ReactPlayer from "react-player";
 import { HomePage } from "../assets/styles/homeStyles.js";
+import Habilidades from "./skills.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import ReactPlayer from "react-player";
+
+// import backgroundVideo from "../assets/video/FlyingRedKeys.mp4";
 // import homeBackground from "../assets/images/background-img.png";
-// import backgroundVideo from "../assets/video/background-video.mp4";
 
 console.log(process.env.NODE_ENV);
 
 function Home() {
   return (
     <HomePage>
+      <div className="home-bg-gradient"></div>
+      <ReactPlayer
+        className="background-video"
+        loop="true"
+        muted="true"
+        width="1920px"
+        height="1080px"
+        playing="true"
+        controls="false"
+        url="https://youtu.be/ae6_Nq4AWDA"
+      ></ReactPlayer>
       <div className="home-body">
-        <ReactPlayer
-          className="background-video"
-          loop="true"
-          muted="true"
-          width="1920px"
-          height="1080px"
-          playing="true"
-          controls="false"
-          url="https://www.youtube.com/watch?v=ae6_Nq4AWDA&t"
-        ></ReactPlayer>
+        <input id="menu-expand" type="checkbox" />
+        <label for="menu-expand">
+          <span>
+            <FontAwesomeIcon id="first-arrow" icon={faAngleRight} />
+            <FontAwesomeIcon id="second-arrow" icon={faAngleRight} />
+          </span>
+        </label>
+        <div className="menu">
+          <h1>Logo</h1>
+        </div>
 
-        <div className="home-bg-gradient"></div>
         <div className="row">
           <div className="wrapper">
             <div className="box-titles">
@@ -35,6 +49,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <Habilidades></Habilidades>
       </div>
     </HomePage>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../assets/styles/globalStyles";
 import theme from "../assets/styles/theme";
+import "../assets/icons/index";
 
 function MyApp({ Component, pageProps }) {
   return (

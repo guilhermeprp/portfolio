@@ -1,46 +1,116 @@
 import styled from "styled-components";
 
 export const HomePage = styled.div`
-  .home-body {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  overflow-y: scroll;
+  .home-bg-gradient {
     height: 100vh;
+    width: 100%;
+    z-index: 0;
+    opacity: 1;
+    background-image: linear-gradient(transparent 40%, rgb(1 1 1) 120%);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .background-video {
+    z-index: -1;
+    position: fixed;
+    top: -50px;
+  }
+
+  .home-body {
+    height: 200vh;
     width: 100vw;
-    overflow: hidden;
-    video {
-      z-index: -1;
+    position: absolute;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(10, 1fr);
+
+    grid-template-areas:
+      "vazio1"
+      "vazio2"
+      "home"
+      "skills"
+      "projects"
+      "contact";
+    grid-gap: 25px;
+
+    #menu-expand {
+      display: none;
     }
 
-    .home-bg-gradient {
-      height: 100vh;
-      width: 100%;
-      z-index: 0;
-      opacity: 1;
-      background-image: linear-gradient(transparent 60%, #010101 90%);
-      position: absolute;
-      top: 0;
+    > label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
       left: 0;
+      transition: 0.5s;
+      padding: 20px;
+      width: 100px;
+      height: 100px;
+      z-index: 1;
+
+      > span {
+        transition: 0.3s;
+        transition-delay: 0.3s;
+        svg {
+          color: rgba(255, 255, 255, 0.9);
+          width: 30px;
+        }
+      }
     }
 
-    .row {
-      right: 0;
-      top: 50vh;
-      z-index: 1;
-      position: absolute;
-      width: 100vw;
-      text-align-last: right;
-      .wrapper {
-        padding: 0px 10vw;
+    #menu-expand:checked ~ label {
+      left: 11%;
+      > span {
+        transform: rotateY(180deg);
+        svg#first-arrow {
+          animation: arrowAnimation 1s infinite;
+          animation-delay: 1s;
+        }
+        svg#second-arrow {
+          animation: arrowAnimation 1s infinite;
+          animation-delay: 1.1s;
+        }
+      }
+    }
 
+    #menu-expand:checked ~ .menu {
+      width: 11%;
+      background: blueviolet;
+    }
+
+    .menu {
+      transition: 0.5s;
+      position: fixed;
+      overflow: hidden;
+      grid-area: header;
+      width: 0;
+      height: 100vh;
+    }
+    .row {
+      /* grid-area: home; */
+      grid-row-start: 4;
+      right: 0;
+      text-align-last: right;
+      position: relative;
+      .wrapper {
+        padding: 0px 5vw;
         .box-titles {
           display: inline-block;
-          width: 70%;
+          width: 100%;
           height: 100%;
 
           .title1 {
-            color: ${(props) => props.theme.colors.title};
+            color: white;
             font-size: 20px;
             font-weight: 100;
             letter-spacing: 10px;
-
             margin: 0;
           }
 
@@ -60,7 +130,7 @@ export const HomePage = styled.div`
           .title3 {
             float: right;
             text-align: end;
-            color: ${(props) => props.theme.colors.subtitle};
+            color: white;
             font-size: 30px;
           }
         }
@@ -68,97 +138,12 @@ export const HomePage = styled.div`
     }
   }
 
-  @media screen and (max-width: 1340px) and (min-width: 769px) {
-    .row {
-      top: 40vh !important;
+  @keyframes arrowAnimation {
+    0% {
+      opacity: 1;
     }
-
-    .title3 {
-      max-width: 460px;
-      text-align: justify;
-    }
-  }
-
-  @media screen and (max-width: 768px) and (min-width: 577px) {
-    .home-body {
-      height: 110vh;
-    }
-    .row {
-      top: 65vh;
-    }
-    .title1 {
-      font-size: 16px !important;
-      padding-left: 5px !important;
-      width: max-content !important;
-      display: inline;
-      color: #696d79 !important;
-    }
-    .title2 {
-      font-size: 90px !important;
-      line-height: 90px !important;
-      margin-top: 5px !important;
-    }
-    .title3 {
-      font-size: 20px !important;
-      padding-left: 5px !important;
-      max-width: 100vw !important;
-      width: 80vw !important;
-    }
-  }
-
-  @media screen and (max-width: 576px) {
-    .home-body {
-      .background-video div {
-        width: 100vh !important;
-        height: 215vw !important;
-        left: -50%;
-        position: fixed;
-        transform: rotate(-90deg);
-        z-index: 0;
-      }
-      .row {
-        z-index: 1;
-        width: 90vw !important;
-        left: 20px !important;
-        text-align-last: left !important;
-        float: left !important;
-        top: 60vh !important;
-        .wrapper {
-          padding: 0px 10px !important;
-          .box-titles {
-            .title1 {
-              font-size: 11px !important;
-              text-align-last: left !important;
-              float: left !important;
-              padding-left: 5px !important;
-              width: max-content !important;
-            }
-            .title2 {
-              font-size: 50px !important;
-              text-align-last: left !important;
-              float: left !important;
-              line-height: 60px !important;
-              margin-top: 5px !important;
-              text-align: -webkit-left !important;
-            }
-            .title3 {
-              font-size: 16px !important;
-              text-align-last: left !important;
-              float: left !important;
-              padding-left: 5px !important;
-              max-width: 100vw !important;
-              width: 80vw !important;
-              text-align: start !important;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 375px) {
-    .row .wrapper {
-      padding: 0px 2px;
+    100% {
+      opacity: 0.4;
     }
   }
 
