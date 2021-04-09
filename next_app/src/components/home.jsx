@@ -1,9 +1,10 @@
 import React from "react";
 import { HomePage } from "../assets/styles/homeStyles.js";
-import Habilidades from "./skills.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from "react-player";
+import Habilidades from "./skills.jsx";
+import SideBar from "./sidebar.jsx";
 
 // import backgroundVideo from "../assets/video/FlyingRedKeys.mp4";
 // import homeBackground from "../assets/images/background-img.png";
@@ -14,6 +15,7 @@ function Home() {
   return (
     <HomePage>
       <div className="home-bg-gradient"></div>
+
       <ReactPlayer
         className="background-video"
         loop="true"
@@ -24,16 +26,19 @@ function Home() {
         controls="false"
         url="https://youtu.be/ae6_Nq4AWDA"
       ></ReactPlayer>
+
       <div className="home-body">
         <input id="menu-expand" type="checkbox" />
-        <label for="menu-expand">
+
+        <label htmlFor="menu-expand">
           <span>
             <FontAwesomeIcon id="first-arrow" icon={faAngleRight} />
             <FontAwesomeIcon id="second-arrow" icon={faAngleRight} />
           </span>
         </label>
+
         <div className="menu">
-          <h1>Logo</h1>
+          <SideBar></SideBar>
         </div>
 
         <div className="row">
@@ -49,6 +54,7 @@ function Home() {
             </div>
           </div>
         </div>
+
         <Habilidades></Habilidades>
       </div>
     </HomePage>

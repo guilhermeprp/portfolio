@@ -5,6 +5,7 @@ export const HomePage = styled.div`
   width: 100vw;
   position: fixed;
   overflow-y: scroll;
+
   .home-bg-gradient {
     height: 100vh;
     width: 100%;
@@ -15,6 +16,7 @@ export const HomePage = styled.div`
     top: 0;
     left: 0;
   }
+
   .background-video {
     z-index: -1;
     position: fixed;
@@ -29,7 +31,6 @@ export const HomePage = styled.div`
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(10, 1fr);
-
     grid-template-areas:
       "vazio1"
       "vazio2"
@@ -54,7 +55,6 @@ export const HomePage = styled.div`
       width: 100px;
       height: 100px;
       z-index: 1;
-
       > span {
         transition: 0.3s;
         transition-delay: 0.3s;
@@ -65,14 +65,21 @@ export const HomePage = styled.div`
       }
     }
 
+    #menu-expand ~ label:hover {
+      cursor: pointer;
+    }
+
     #menu-expand:checked ~ label {
       left: 11%;
+
       > span {
         transform: rotateY(180deg);
+
         svg#first-arrow {
           animation: arrowAnimation 1s infinite;
           animation-delay: 1s;
         }
+
         svg#second-arrow {
           animation: arrowAnimation 1s infinite;
           animation-delay: 1.1s;
@@ -82,7 +89,7 @@ export const HomePage = styled.div`
 
     #menu-expand:checked ~ .menu {
       width: 11%;
-      background: blueviolet;
+      z-index: 999;
     }
 
     .menu {
@@ -93,14 +100,16 @@ export const HomePage = styled.div`
       width: 0;
       height: 100vh;
     }
+
     .row {
-      /* grid-area: home; */
-      grid-row-start: 4;
+      grid-row-start: 5;
       right: 0;
       text-align-last: right;
       position: relative;
+
       .wrapper {
         padding: 0px 5vw;
+
         .box-titles {
           display: inline-block;
           width: 100%;
@@ -120,11 +129,10 @@ export const HomePage = styled.div`
             font-size: 100px;
             letter-spacing: 5px;
             padding-bottom: 5px;
-
             margin: 0;
-            text-align-last: right;
             float: right;
             text-align: right;
+            text-align-last: right;
           }
 
           .title3 {

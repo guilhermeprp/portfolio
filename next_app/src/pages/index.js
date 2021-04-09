@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Home from "../components/home.jsx";
-import Nav from "../components/navbar.jsx";
 
 function App() {
   return (
