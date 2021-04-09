@@ -30,7 +30,7 @@ export const HomePage = styled.div`
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 25%);
     grid-template-areas:
       "vazio1"
       "vazio2"
@@ -70,7 +70,7 @@ export const HomePage = styled.div`
     }
 
     #menu-expand:checked ~ label {
-      left: 11%;
+      left: 200px;
 
       > span {
         transform: rotateY(180deg);
@@ -88,7 +88,7 @@ export const HomePage = styled.div`
     }
 
     #menu-expand:checked ~ .menu {
-      width: 11%;
+      width: 200px;
       z-index: 999;
     }
 
@@ -102,10 +102,11 @@ export const HomePage = styled.div`
     }
 
     .row {
-      grid-row-start: 5;
+      grid-row-start: 2;
       right: 0;
       text-align-last: right;
       position: relative;
+      align-self: center;
 
       .wrapper {
         padding: 0px 5vw;
@@ -117,7 +118,7 @@ export const HomePage = styled.div`
 
           .title1 {
             color: white;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 100;
             letter-spacing: 10px;
             margin: 0;
@@ -126,7 +127,7 @@ export const HomePage = styled.div`
           .title2 {
             display: block;
             color: white;
-            font-size: 100px;
+            font-size: 60px;
             letter-spacing: 5px;
             padding-bottom: 5px;
             margin: 0;
@@ -139,7 +140,7 @@ export const HomePage = styled.div`
             float: right;
             text-align: end;
             color: white;
-            font-size: 30px;
+            font-size: 22px;
           }
         }
       }
@@ -167,6 +168,20 @@ export const HomePage = styled.div`
     100% {
       transform: translateY(0);
       opacity: 0.1;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .title1 {
+      font-size: 20px;
+    }
+
+    .title2 {
+      font-size: 100px;
+    }
+
+    .title3 {
+      font-size: 30px;
     }
   }
 `;
