@@ -142,6 +142,20 @@ export const HomePage = styled.div`
             color: white;
             font-size: 22px;
           }
+
+          @media (min-width: 600px) {
+            .title1 {
+              font-size: 20px;
+            }
+
+            .title2 {
+              font-size: 100px;
+            }
+
+            .title3 {
+              font-size: 30px;
+            }
+          }
         }
       }
     }
@@ -168,20 +182,6 @@ export const HomePage = styled.div`
     100% {
       transform: translateY(0);
       opacity: 0.1;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    .title1 {
-      font-size: 20px;
-    }
-
-    .title2 {
-      font-size: 100px;
-    }
-
-    .title3 {
-      font-size: 30px;
     }
   }
 `;
