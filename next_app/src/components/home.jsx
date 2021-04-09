@@ -20,8 +20,6 @@ function Home() {
         className="background-video"
         loop="true"
         muted="true"
-        width="1920px"
-        height="1080px"
         playing={true}
         controls="false"
         url="https://youtu.be/ae6_Nq4AWDA"

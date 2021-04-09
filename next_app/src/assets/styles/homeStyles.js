@@ -21,6 +21,9 @@ export const HomePage = styled.div`
     z-index: -1;
     position: fixed;
     top: -50px;
+    left: -500px;
+    width: 1400px !important;
+    height: 900px !important;
   }
 
   .home-body {
@@ -158,6 +161,14 @@ export const HomePage = styled.div`
           }
         }
       }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .background-video {
+      left: 0;
+      width: 1920px !important;
+      height: 1080px !important;
     }
   }
 
