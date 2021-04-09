@@ -22,7 +22,7 @@ function Home() {
         muted="true"
         width="1920px"
         height="1080px"
-        playing="true"
+        playing={true}
         controls="false"
         url="https://youtu.be/ae6_Nq4AWDA"
       ></ReactPlayer>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Skills = styled.div`
-  grid-row-start: 7;
+  grid-row-start: 3;
 
   .wrapper {
     padding: 0 5vw;
@@ -41,9 +41,9 @@ export const Skills = styled.div`
       position: absolute;
       background: linear-gradient(
         90deg,
-        rgba(000, 000, 000, 0.1) 10%,
+        rgba(000, 000, 000, 0.1) 0%,
         rgba(237, 008, 057, 1) 50%,
-        rgba(000, 000, 000, 0.1) 90%
+        rgba(000, 000, 000, 0.1) 100%
       );
     }
   }
@@ -100,6 +100,16 @@ export const Skills = styled.div`
     }
     50% {
       color: orange;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .title > div {
+      background: linear-gradient(
+        90deg,
+        rgba(000, 000, 000, 0.1) 10%,
+        rgba(237, 008, 057, 1) 50%,
+        rgba(000, 000, 000, 0.1) 90%
+      );
     }
   }
 `;
