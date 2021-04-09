@@ -5,7 +5,7 @@ export const Skills = styled.div`
 
   .wrapper {
     padding: 0 5vw;
-    text-align-last: center;
+    text-align: center;
   }
 
   .title {
@@ -91,6 +91,7 @@ export const Skills = styled.div`
     filter: opacity(0.3) saturate(0);
     height: 150px;
     width: 150px;
+    transform: translateX(-75px);
   }
 
   @keyframes underlineFlashing {
