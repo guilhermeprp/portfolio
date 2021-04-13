@@ -1,51 +1,8 @@
 import styled from "styled-components";
 
-export const Skills = styled.div`
-  grid-row-start: 3;
-
+export const Skills = styled.section`
   .wrapper {
-    padding: 0 5vw;
     text-align: center;
-  }
-
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 0;
-
-    > h1 {
-      z-index: 2;
-      padding: 7px 0;
-      width: 200px;
-      border: 5px solid rgb(237, 008, 057, 0.8);
-      border-radius: 50px;
-      background: rgb(015, 010, 029, 1);
-      font-size: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      span {
-        font-size: 40px;
-        font-weight: 900;
-        animation: underlineFlashing 1s step-end infinite;
-        transform: translateX(5px) translateY(-5px);
-      }
-    }
-
-    > div {
-      z-index: 1;
-      width: 100%;
-      height: 20px;
-      position: absolute;
-      background: linear-gradient(
-        90deg,
-        rgba(000, 000, 000, 0.1) 0%,
-        rgba(237, 008, 057, 1) 50%,
-        rgba(000, 000, 000, 0.1) 100%
-      );
-    }
   }
 
   .skills-box {
@@ -92,25 +49,5 @@ export const Skills = styled.div`
     height: 150px;
     width: 150px;
     transform: translateX(-75px);
-  }
-
-  @keyframes underlineFlashing {
-    from,
-    to {
-      color: transparent;
-    }
-    50% {
-      color: orange;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    .title > div {
-      background: linear-gradient(
-        90deg,
-        rgba(000, 000, 000, 0.1) 10%,
-        rgba(237, 008, 057, 1) 50%,
-        rgba(000, 000, 000, 0.1) 90%
-      );
-    }
   }
 `;

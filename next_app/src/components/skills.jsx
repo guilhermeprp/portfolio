@@ -10,13 +10,14 @@ import skill_english from "../assets/images/skills-curriculo-english.png";
 
 function Habilidades() {
   return (
-    <Skills>
+    <Skills id="habilidades">
       <div className="wrapper">
-        <div className="title">
-          <h1>
-            {"<"} skills<span>|</span>
+        <div className="section-title-row">
+          <h1 className="section-title">
+            {"<"} Skills<span className="blink-caret">|</span>
           </h1>
-          <div></div>
+
+          <div className="section-background-line"></div>
         </div>
 
         <div className="skills-section">

@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../assets/styles/globalStyles";
+import GlobalStyle from "../assets/styles/globalStyle";
 import theme from "../assets/styles/theme";
 import "../assets/icons/index";
 

@@ -1,48 +1,40 @@
 import styled from "styled-components";
 
-export const HomePage = styled.div`
-  height: 100vh;
-  width: 100vw;
+export const HomePage = styled.section`
   position: fixed;
   overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
 
   .home-bg-gradient {
-    height: 100vh;
-    width: 100%;
     z-index: 0;
-    opacity: 1;
-    background-image: linear-gradient(transparent 40%, rgb(1 1 1) 120%);
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-image: linear-gradient(transparent 40%, rgb(1 1 1) 120%);
   }
 
   .background-video {
     z-index: -1;
     position: fixed;
-    top: -50px;
-    left: -500px;
-    width: 1400px !important;
-    height: 900px !important;
+    top: -100px;
+    left: -250px;
+    width: 900px !important;
+    height: 1000px !important;
+    transform: rotate(90deg);
   }
 
   .home-body {
-    height: 200vh;
+    height: 500vh;
     width: 100vw;
     position: absolute;
     overflow-x: hidden;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(10, 25%);
-    grid-template-areas:
-      "vazio1"
-      "vazio2"
-      "home"
-      "skills"
-      "projects"
-      "contact";
-    grid-gap: 25px;
-
+    display: flex;
+    flex-direction: column;
+    /*  //  *Double Arrow Right Side Bar Toggle  */
     #menu-expand {
       display: none;
     }
@@ -57,7 +49,7 @@ export const HomePage = styled.div`
       padding: 20px;
       width: 100px;
       height: 100px;
-      z-index: 1;
+      z-index: 99;
       > span {
         transition: 0.3s;
         transition-delay: 0.3s;
@@ -90,34 +82,36 @@ export const HomePage = styled.div`
       }
     }
 
+    /*  //  *Side Bar  */
     #menu-expand:checked ~ .menu {
       width: 200px;
-      z-index: 999;
     }
 
     .menu {
       transition: 0.5s;
       position: fixed;
       overflow: hidden;
-      grid-area: header;
       width: 0;
       height: 100vh;
+      z-index: 99;
     }
 
     .row {
-      grid-row-start: 2;
       right: 0;
+      width: 100%;
       text-align-last: right;
       position: relative;
       align-self: center;
 
+      /*  //  *Home Titles Section  */
       .wrapper {
-        padding: 0px 5vw;
-
         .box-titles {
-          display: inline-block;
           width: 100%;
-          height: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          place-content: flex-end;
+          padding-bottom: 10vh;
 
           .title1 {
             color: white;
@@ -163,12 +157,14 @@ export const HomePage = styled.div`
       }
     }
   }
-
+  /*  //  *Media Query for Desktop and animations  */
   @media (min-width: 600px) {
     .background-video {
+      top: -50px;
       left: 0;
       width: 1920px !important;
       height: 1080px !important;
+      transform: rotate(0deg);
     }
   }
 
