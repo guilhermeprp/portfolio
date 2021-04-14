@@ -19,7 +19,7 @@ function Projetos() {
         <div className="cards-grid">
           {/* // * ROW GENSHIN */}
           <div className="row1">
-            <div className="card order-2">
+            <div className="card order-2 card-img">
               <img id="genshin" src={genshin} />
             </div>
             <div className="card order-1">
@@ -42,7 +42,7 @@ function Projetos() {
 
           {/* // * ROW UNIP */}
           <div className="row2">
-            <div className="card order-1">
+            <div className="card order-1 card-img">
               <img id="uniphc" src={uniphc} />
             </div>
             <div className="card order-2">

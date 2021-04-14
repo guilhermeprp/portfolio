@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import project1 from "../images/genshin_dmg_home.png";
 
 export const Projects = styled.section`
   .cards-grid {
@@ -10,16 +9,16 @@ export const Projects = styled.section`
       display: flex;
       flex-direction: column;
       margin: 3rem 0;
+      position: relative;
     }
   }
   .card {
     width: 100%;
     max-height: 300px;
     margin: 2rem 0;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position: relative;
     /* object-fit: cover; */
     > div {
       height: 100%;
@@ -65,22 +64,29 @@ export const Projects = styled.section`
         }
       }
     }
-    #uniphc {
-      object-fit: cover;
-      transition: 0.5s;
-      transform: translateY(-50px) scale(0.8);
-      &:hover {
-        transform: translateY(-50px) scale(0.9);
-      }
+  }
+
+  .card-img {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #genshin {
+    transition: 0.5s;
+    transform: scale(0.6);
+
+    &:hover {
+      transform: scale(0.7);
     }
+  }
 
-    #genshin {
-      transition: 0.5s;
-      transform: translateY(-70px) scale(0.5);
+  #uniphc {
+    transition: 0.5s;
+    transform: scale(0.9);
 
-      &:hover {
-        transform: translateY(-70px) scale(0.6);
-      }
+    &:hover {
+      transform: scale(1);
     }
   }
 
