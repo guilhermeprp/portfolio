@@ -3,8 +3,10 @@ import { HomePage } from "../assets/styles/homeStyles.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from "react-player";
-import Habilidades from "./skills.jsx";
-import SideBar from "./sidebar.jsx";
+import Habilidades from "./skills";
+import SideBar from "./sidebar";
+import Experiencia from "./experience";
+import Projetos from "./projects";
 
 // import backgroundVideo from "../assets/video/FlyingRedKeys.mp4";
 // import homeBackground from "../assets/images/background-img.png";
@@ -18,10 +20,10 @@ function Home() {
 
       <ReactPlayer
         className="background-video"
-        loop="true"
-        muted="true"
+        loop={true}
+        muted={true}
         playing={true}
-        controls="false"
+        controls={false}
         url="https://youtu.be/ae6_Nq4AWDA"
       ></ReactPlayer>
 
@@ -39,7 +41,7 @@ function Home() {
           <SideBar></SideBar>
         </div>
 
-        <div className="row">
+        <div data-aos="fade-up" className="row">
           <div className="wrapper">
             <div className="box-titles">
               <h5 className="title1">GUILHERME PIMENTA</h5>
@@ -52,8 +54,9 @@ function Home() {
             </div>
           </div>
         </div>
-
         <Habilidades></Habilidades>
+        <Projetos> </Projetos>
+        <Experiencia></Experiencia>
       </div>
     </HomePage>
   );
