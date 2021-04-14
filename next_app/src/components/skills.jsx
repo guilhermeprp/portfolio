@@ -20,7 +20,7 @@ function Habilidades() {
           <div className="section-background-line"></div>
         </div>
 
-        <div className="skills-section">
+        <div className="skills-box-section">
           <div className="skills-box">
             <img className="skills-shadow" src={skill_react} />
             <img className="skills" src={skill_react} />

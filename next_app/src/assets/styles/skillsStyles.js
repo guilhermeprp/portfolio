@@ -50,4 +50,10 @@ export const Skills = styled.section`
     width: 150px;
     transform: translateX(-75px);
   }
+
+  @media (min-width: 769px) {
+    .skills-box-section {
+      margin-top: 13rem;
+    }
+  }
 `;
