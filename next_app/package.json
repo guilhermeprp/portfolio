@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^10.0.7",
+    "aos": "^2.3.4",
     "next": "^10.0.7",
     "next-images": "^1.7.0",
     "particles.js": "^2.0.0",
