@@ -3,7 +3,7 @@ import { Projects } from "../assets/styles/projectsStyles";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import genshin from "../assets/images/genshin_dmg_home.png";
-import uniphc from "../assets/images/uniphc.png";
+import uniphc from "../assets/images/unip-hc.png";
 
 function Projetos() {
   return (
