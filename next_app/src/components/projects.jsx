@@ -7,7 +7,7 @@ import uniphc from "../assets/images/unip-hc.png";
 
 function Projetos() {
   return (
-    <Projects>
+    <Projects id="projects">
       <div className="wrapper">
         <div className="section-title-row">
           <h1 className="section-title">
@@ -30,7 +30,7 @@ function Projetos() {
                   was maded to calculate your character damage, preventing
                   players to waste money on weak characters.
                 </p>
-                <a href="">
+                <a href="https://genshin-dmg-calculator.vercel.app/">
                   <strong>
                     Site
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
@@ -52,7 +52,7 @@ function Projetos() {
                   Unip complementary hours is an app that help the university
                   student to manage they hours and tasks.
                 </p>
-                <a href="">
+                <a href="https://github.com/guilhermeprp/horas_c">
                   <strong>
                     GitHub
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>

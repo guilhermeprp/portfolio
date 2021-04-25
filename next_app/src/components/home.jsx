@@ -27,7 +27,7 @@ function Home() {
         url="https://youtu.be/ae6_Nq4AWDA"
       ></ReactPlayer>
 
-      <div className="home-body">
+      <div id="home" className="home-body">
         <input id="menu-expand" type="checkbox" />
 
         <label htmlFor="menu-expand">

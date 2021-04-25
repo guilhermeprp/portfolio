@@ -3,7 +3,7 @@ import { Experience } from "../assets/styles/experienceStyle";
 
 function Experiencia() {
   return (
-    <Experience>
+    <Experience id="experience">
       <div className="wrapper">
         <div className="section-title-row">
           <h1 className="section-title">
