@@ -54,7 +54,7 @@ export const SideBar = styled.section`
       }
 
       a:hover::before {
-        transform: translate(-2rem, 0rem);
+        transform: translate(-1.5rem, 0rem);
         transition: 0.3s;
       }
     }

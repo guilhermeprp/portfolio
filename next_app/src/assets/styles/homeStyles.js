@@ -168,6 +168,14 @@ export const HomePage = styled.section`
     }
   }
 
+  @media (min-width: 2000px) {
+    .background-video {
+      left: -250px;
+      width: 120vw !important;
+      height: 110vh !important;
+    }
+  }
+
   @keyframes arrowAnimation {
     0% {
       opacity: 1;

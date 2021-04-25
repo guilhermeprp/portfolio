@@ -3,6 +3,8 @@ import { SideBar } from "../assets/styles/sidebarStyle.js";
 import logo from "../assets/images/logo-render.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faAddressCard,
+  faCode,
   faGamepad,
   faHandshake,
   faHome,
@@ -25,11 +27,17 @@ function Side() {
           <a href="#habilidades">
             <FontAwesomeIcon icon={faMedal}></FontAwesomeIcon>Skills
           </a>
-          <a href="#">
-            <FontAwesomeIcon icon={faGamepad}></FontAwesomeIcon> About
+          <a href="#projects">
+            <FontAwesomeIcon icon={faHandshake}></FontAwesomeIcon>Projects
+          </a>
+          <a href="#experience">
+            <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>Experience
           </a>
           <a href="#">
-            <FontAwesomeIcon icon={faHandshake}></FontAwesomeIcon>Contact
+            <FontAwesomeIcon icon={faGamepad}></FontAwesomeIcon>About
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon>Contact
           </a>
         </div>
       </div>

@@ -8,11 +8,13 @@ export default createGlobalStyle`
   box-sizing:border-box;
   font-family: "Gill Sans","Gill Sans MT",Calibri,"Trebuchet MS",sans-serif;
   color: white;
+  scroll-behavior:smooth;
 }
 
 body{
   background: ${(props) => props.theme.colors.background};
   overflow:hidden;
+  
   
 }
 
